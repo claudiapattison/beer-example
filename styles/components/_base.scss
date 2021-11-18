@@ -1,0 +1,23 @@
+@use '../abstracts/index' as a;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: a.$primary-font-family;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.center {
+  text-align: center;
+}

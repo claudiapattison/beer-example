@@ -1,0 +1,29 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.col,
+  [class*=' col-'],
+  [class^='col-'] {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .col-md-6 {
+    width: calc(100% / 12 * 6);
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .col-lg-4 {
+    width: calc(100% / 12 * 4);
+  }
+}
