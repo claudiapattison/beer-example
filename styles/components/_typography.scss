@@ -1,9 +1,9 @@
-@use '../abstracts/index' as a;
+@use '../variables/index' as v;
 
 h1,
 h2,
 h3 {
-  font-family: a.$secondary-font-family;
+  font-family: v.$secondary-font-family;
   text-transform: uppercase;
 }
 

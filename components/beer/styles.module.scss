@@ -1,4 +1,4 @@
-@use '../../styles/abstracts';
+@use '../../styles/variables';
 
 .item {
   height: 100%;
@@ -9,7 +9,6 @@
 .inner {
   padding: 2rem;
   height: 20rem;
-  //background-color: #A3937B;
   border-bottom: 2px solid #71695D;
 }
 
@@ -27,4 +26,10 @@
 
 .title {
   color: #A3937B;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

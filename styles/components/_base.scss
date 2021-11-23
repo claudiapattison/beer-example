@@ -1,9 +1,9 @@
-@use '../abstracts/index' as a;
+@use '../variables/index' as v;
 
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  font-family: a.$primary-font-family;
+  font-family: v.$primary-font-family;
 }
 
 *,
