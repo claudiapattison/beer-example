@@ -1,14 +1,14 @@
-@use '../../styles/variables';
+@use '../../styles/variables' as v;
 
 .container {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #252427;
+  background-color: v.$tertiary-1;
 }
 
 .title {
   margin-bottom: 5rem;
-  color: #C0C0C0;
+  color: v.$secondary-2;
 }
 
 .item {
