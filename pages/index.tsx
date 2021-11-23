@@ -9,6 +9,7 @@ export type Beer = {
   description: string;
   id: number;
   image_url: string;
+  abv: number;
 };
 
 const Home: NextPage<{ beers: Beer[] }> = ({ beers }) => {
@@ -21,13 +22,10 @@ const Home: NextPage<{ beers: Beer[] }> = ({ beers }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <BeerList name="Headliner Beer" beers={beers} />
-
-       
-    
-        <h1>
+      <h1>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+        <BeerList name="Headliner Beer" beers={beers} />
 
       </main>
     </div>

@@ -22,6 +22,7 @@ const BeerList: React.FC<BeerListProps> = ({ name, beers }) => {
                 name={item.name}
                 tagline={item.tagline}
                 image_url={item.image_url}
+                abv={item.abv}
               />
             </div>
           ))}

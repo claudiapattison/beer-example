@@ -6,9 +6,10 @@ export type BeerProps = {
   name: string;
   tagline	: string;
   image_url: string;
+  abv: number;
 };
 
-const Beer: React.FC<BeerProps> = ({ name, tagline, image_url }) => {
+const Beer: React.FC<BeerProps> = ({ name, tagline, image_url, abv }) => {
 
   return (
    
@@ -21,6 +22,9 @@ const Beer: React.FC<BeerProps> = ({ name, tagline, image_url }) => {
       <div className={styles.innerBottom}>
         <h3 className={styles.title}>{name}</h3>
         <p>{tagline}</p>
+        <ul className={styles.list}>
+          <li>Alcohol volume: {abv}</li>
+        </ul>
       </div>
     </div>
        
