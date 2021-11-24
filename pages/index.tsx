@@ -33,7 +33,7 @@ const Home: NextPage<{ beers: Beer[] }> = ({ beers }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`https://api.punkapi.com/v2/beers`)
+  const res = await fetch(`https://api.punkapi.com/v2/beers?per_page=8`)
   const beers = await res.json()
 
   if (!beers) {

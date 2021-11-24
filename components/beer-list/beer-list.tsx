@@ -1,5 +1,5 @@
 import { Data } from '@pages/';
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import styles from './styles.module.scss';
 import { Beer } from '../beer/beer';
 
@@ -12,6 +12,9 @@ interface BeerListProps {
 
 const BeerList: React.FC<BeerListProps> = ({ name, beers }) => {
 
+  const [beersList, setBeersList] = useState(beers);
+
+
   const setSortType = (event: ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
     
@@ -19,8 +22,6 @@ const BeerList: React.FC<BeerListProps> = ({ name, beers }) => {
       beers.sort(function (a, b) {
         return a.abv - b.abv;
       });
-
-      console.log(beers);
     }
 
     if(value === "name") {
@@ -35,10 +36,15 @@ const BeerList: React.FC<BeerListProps> = ({ name, beers }) => {
         }
 
         return 0;
-      });
 
-      console.log(beers);
+      });
+      
+
     }
+
+    setBeersList([...beers])
+
+
   };
 
   return (
@@ -48,13 +54,14 @@ const BeerList: React.FC<BeerListProps> = ({ name, beers }) => {
         <div className='row'>
           <div className='col'>
             <select className={styles.select} onChange={setSortType}>
-              <option value="name">Name: </option>
+              <option value="default" >Choose here</option>
+              <option value="name">Name </option>
               <option value="abv">Alcohol Volume: low to high</option>
             </select>
           </div>
         </div>
         <div className='row'>
-          {beers.slice(0,8).map((item) => (
+          {beersList.map((item) => (
             <div key={item.id} className={`col-md-6 col-lg-4 ${styles.item}`}>
               <Beer 
                 name={item.name}
