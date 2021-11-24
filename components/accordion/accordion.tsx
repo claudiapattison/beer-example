@@ -1,11 +1,10 @@
-import { Data } from '@pages/';
 import React, { ChangeEvent, useState } from 'react';
 import styles from './styles.module.scss';
 import { AccordionItem } from '@components/accordion-item/accordion-item';
 
 
 interface AccordionProp {
-  beers: Data[];
+  beers: any;
 }
 
 

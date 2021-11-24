@@ -1,4 +1,3 @@
-import { Data } from '@pages/';
 import React, { ChangeEvent, useState } from 'react';
 import styles from './styles.module.scss';
 import { Beer } from '../beer/beer';
@@ -6,7 +5,7 @@ import { Beer } from '../beer/beer';
 
 interface BeerListProps {
   name: string;
-  beers: Data[];
+  beers: any;
 }
 
 
@@ -42,15 +41,12 @@ const BeerList: React.FC<BeerListProps> = ({ name, beers }) => {
         }
 
         return 0;
-
       });
       
 
     }
 
-    setBeersList([...beers])
-
-
+    setBeersList([...beers]);
   };
 
   return (
