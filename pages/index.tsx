@@ -2,6 +2,7 @@ import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import fetch from 'node-fetch';
 import { BeerList } from '../components/beer-list/beer-list'
+import { Accordion } from '@components/accordion/accordion';
 
 export type Beer = {
   name: string;
@@ -26,7 +27,7 @@ const Home: NextPage<{ beers: Beer[] }> = ({ beers }) => {
           Welcome to Beers
         </h1>
         <BeerList name="Headliner Beer" beers={beers} />
-
+        <Accordion beers={beers} />
       </main>
     </div>
   )

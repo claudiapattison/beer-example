@@ -1,0 +1,46 @@
+@use '../../styles/variables' as v;
+
+.container {
+  margin-bottom: 2rem;
+  background-color: v.$primary-1;
+}
+
+.item {
+  max-height: 0;
+  transition: max-height 0.6s;
+  overflow: hidden;
+}
+
+.header {
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.title {
+  color: v.$white;
+  transition: color 0.6s;
+}
+
+.image {
+  position: relative;
+  margin: 0 0 5rem;
+  padding: 2rem;
+  width: 20rem;
+  height: 100%;
+  display: block;
+  height: 20rem;
+}
+
+
+.item-active {
+  display: block;
+  max-height: 80rem;
+}
+
+.header:hover,
+.header:focus {
+  
+  .title {
+    color: v.$secondary-2;
+  }
+}

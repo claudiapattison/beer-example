@@ -1,0 +1,6 @@
+@use '../../styles/variables' as v;
+
+.container {
+  padding: 5rem;
+  background-color: v.$primary-2;
+}
