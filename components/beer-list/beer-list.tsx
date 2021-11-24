@@ -5,7 +5,7 @@ import { Beer } from '../beer/beer';
 
 interface BeerListProps {
   name: string;
-  beers: any;
+  beers: any[];
 }
 
 
