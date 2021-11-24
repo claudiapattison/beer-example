@@ -22,8 +22,8 @@ const Home: NextPage<{ beers: Beer[] }> = ({ beers }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-      <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        <h1 className="center">
+          Welcome to Beers
         </h1>
         <BeerList name="Headliner Beer" beers={beers} />
 

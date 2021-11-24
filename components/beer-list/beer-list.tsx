@@ -18,9 +18,15 @@ const BeerList: React.FC<BeerListProps> = ({ name, beers }) => {
   const setSortType = (event: ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
     
-    if(value === "abv") {
+    if(value === "abvLow") {
       beers.sort(function (a, b) {
         return a.abv - b.abv;
+      });
+    }
+
+    if(value === "abvHigh") {
+      beers.sort(function (a, b) {
+        return b.abv - a.abv;
       });
     }
 
@@ -54,9 +60,11 @@ const BeerList: React.FC<BeerListProps> = ({ name, beers }) => {
         <div className='row'>
           <div className='col'>
             <select className={styles.select} onChange={setSortType}>
-              <option value="default" >Choose here</option>
+              <option value="default" disabled selected >Sort by:</option>
               <option value="name">Name </option>
-              <option value="abv">Alcohol Volume: low to high</option>
+              <option value="abvLow">Alcohol Volume: low to high</option>
+              <option value="abvHigh">Alcohol Volume: high to low</option>
+
             </select>
           </div>
         </div>

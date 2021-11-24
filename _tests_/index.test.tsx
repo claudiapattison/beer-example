@@ -11,7 +11,7 @@
      render(<Home beers={[]} />)
  
      const heading = screen.getByRole('heading', {
-       name: /welcome to next\.js!/i,
+       name: /welcome to Beers/i,
      })
  
      expect(heading).toBeInTheDocument()
